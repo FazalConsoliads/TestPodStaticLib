@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TestPodStaticLib'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'A short description of TestPodStaticLib.'
 
   s.description      = <<-DESC
@@ -42,6 +42,10 @@ A testing static lib pod used to check how static lib can be used.
   
   s.xcconfig = {
     'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TestPodStaticLib"'
+  }
+  
+  s.resource_bundles = {
+     'TestPodStaticLib' => ['TestPodStaticLib/Assets/*.{xib,bundle}']
   }
   
   # s.resource_bundles = {
