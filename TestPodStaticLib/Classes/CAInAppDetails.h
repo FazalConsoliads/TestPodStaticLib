@@ -20,22 +20,25 @@ typedef enum : NSUInteger {
     KCABannerAd,
     KCAConsoliAdsIconAd,
     KCANative,
+    KCAConsoliAdsImmersiveAd,
 
 } CAAdType;
 
 
 
-@property(nonatomic) NSString *localizedDescription API_AVAILABLE(ios(3.0), macos(10.7), watchos(6.2));
+@property(nonatomic) NSString *localizedDescription;
 
-@property(nonatomic) NSString *localizedTitle API_AVAILABLE(ios(3.0), macos(10.7), watchos(6.2));
+@property(nonatomic) NSString *localizedTitle;
 
-@property(nonatomic) NSDecimalNumber *price API_AVAILABLE(ios(3.0), macos(10.7), watchos(6.2));
+@property(nonatomic) NSDecimalNumber *price;
 
-@property(nonatomic) NSLocale *priceLocale API_AVAILABLE(ios(3.0), macos(10.7), watchos(6.2));
+@property(nonatomic) NSLocale *priceLocale;
 
-@property(nonatomic) NSString *productIdentifier API_AVAILABLE(ios(3.0), macos(10.7), watchos(6.2));
+@property(nonatomic) NSString *productIdentifier;
 
 @property (nonatomic) CAAdType adType;
+
+@property(nonatomic) NSString* scene;
 
 @end
 

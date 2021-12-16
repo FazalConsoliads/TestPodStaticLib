@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TestPodStaticLib'
-  s.version          = '1.3.0'
+  s.version          = '1.4.0'
   s.summary          = 'A short description of TestPodStaticLib.'
 
   s.description      = <<-DESC
@@ -38,7 +38,7 @@ A testing static lib pod used to check how static lib can be used.
     'VALID_ARCHS[sdk=iphoneos*]' => 'arm64 armv7',
   }
   
-  s.ios.vendored_libraries = 'TestPodStaticLib/libConsoliMediation.a','TestPodStaticLib/libConsoliAdsInApp.a','TestPodStaticLib/libconsoliads-mediation.a','TestPodStaticLib/libConsoliAd.a','TestPodStaticLib/libCAAnalytics.a'
+  s.ios.vendored_libraries = 'TestPodStaticLib/libConsoliMediation.a','TestPodStaticLib/libConsoliAdsInApp.a','TestPodStaticLib/libconsoliads-mediation.a','TestPodStaticLib/libCAAnalytics.a'
   
   s.xcconfig = {
     'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TestPodStaticLib"'
@@ -47,6 +47,8 @@ A testing static lib pod used to check how static lib can be used.
   s.resource_bundles = {
      'TestPodStaticLib' => ['TestPodStaticLib/Assets/*.{xib,bundle}']
   }
+  
+#  s.dependency 'TestSDKStaticLib', '~> 0.1.1'
   
   # s.resource_bundles = {
   #   'TestPodStaticLib' => ['TestPodStaticLib/Assets/*.png']
